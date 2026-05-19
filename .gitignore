@@ -1,0 +1,7 @@
+allocator_test
+*.o
+*.out
+*.csv
+*.log
+/results/*
+!.gitkeep
