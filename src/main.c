@@ -45,8 +45,18 @@ int main(void) {
     pool_destroy(&pool);
 
     printf("Benchmark comparison:\n\n");
+
+    printf("Case 1: 64-byte blocks, 10,000 operations\n");
     run_pool_benchmark(64, 10000, 10000);
     run_malloc_benchmark(64, 10000);
+
+    printf("Case 2: 256-byte blocks, 10,000 operations\n");
+    run_pool_benchmark(256, 10000, 10000);
+    run_malloc_benchmark(256, 10000);
+
+    printf("Case 3: 64-byte blocks, 50,000 operations\n");
+    run_pool_benchmark(64, 50000, 50000);
+    run_malloc_benchmark(64, 50000);
 
     return 0;
 }
